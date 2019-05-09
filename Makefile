@@ -26,15 +26,13 @@ hashpass.o: hashpass.c
 # See the rule for hashpass above.
 # Remove the "@echo" lines.
 crack: crack.o md5.o
-	@echo No rule for building the executable.
-	@echo "  Modify the Makefile first."
+	clang crack.o md5.o -o crack -l crypto
 
 
 # Add a recipe to build crack.o out of crack.c
 # Remove the "@echo" lines.
 crack.o: crack.c
-	@echo No rule for building crack.o
-	@echo "  Modify the Makefile first"
+	clang -c crack.c -g -Wall
 
 
 hashes: hashpass
