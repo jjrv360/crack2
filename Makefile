@@ -32,7 +32,7 @@ crack: crack.o md5.o
 # Add a recipe to build crack.o out of crack.c
 # Remove the "@echo" lines.
 crack.o: crack.c
-	clang -c crack.c -g -Wall
+	clang -c crack.c -Wall
 
 
 hashes: hashpass
